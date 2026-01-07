@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máximus Júnior | Consultoria Contábil e Econômica</title>
+
+  <!-- Ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --laranja: #f7931e;
+      --laranja-brilho: #ffae42;
+      --preto: #0b0b0b;
+      --preto-sec: #141414;
+      --branco: #ffffff;
+      --cinza: #f4f6f8;
+      --cinza-texto: #9ca3af;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background: var(--cinza);
+      color: var(--preto);
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+      url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--branco);
+      padding: 6.5rem 1rem;
+      text-align: center;
+      box-shadow: inset 0 -80px 120px rgba(247,147,30,0.15);
+    }
+
+    header h1 {
+      color: var(--laranja);
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 12px rgba(247,147,30,0.55);
+    }
+
+    header p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 1.15rem;
+      color: #e5e7eb;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--preto);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e5e7eb;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      color: var(--laranja);
+    }
+
+    /* SECTIONS */
+    section {
+      background: var(--branco);
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--laranja), var(--laranja-brilho));
+      margin: 14px auto 0;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(247,147,30,0.6);
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 1rem auto 0;
+      color: var(--cinza-texto);
+    }
+
+    /* INFO ICONS */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .info-box {
+      background: var(--preto-sec);
+      padding: 2.2rem 1.5rem;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(241, 124, 15, 0.5);
+      color: #e5e7eb;
+    }
+
+    .info-box i {
+      font-size: 2.4rem;
+      color: var(--laranja);
+      margin-bottom: 1rem;
+    }
+
+    /* SERVICES */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--preto);
+      padding: 2.2rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(230, 89, 8, 0.55);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 35px rgba(230, 89, 8, 0.55);
+    }
+
+    .card h3 {
+      color: var(--laranja);
+      margin-bottom: 1rem;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      list-style: none;
+      color: var(--cinza-texto);
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--branco);
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(211, 90, 10, 0.08);
+      margin-top: 2rem;
+    }
+
+    .contact p {
+      margin: 0.7rem 0;
+      color: var(--preto);
+    }
+
+    .contact i {
+      color: var(--laranja);
+      margin-right: 8px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(180deg, #000, #0b0b0b);
+      color: #9ca3af;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+      box-shadow: inset 0 20px 40px rgba(247,147,30,0.1);
+    }
+
+    footer span {
+      color: var(--laranja);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Group 83.png" alt="Logo Máximus Júnior" style="width:140px;max-width:80%;margin-bottom:1.5rem;filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));" />
+  <h1>Máximus Júnior</h1>
+  <p>Consultoria Contábil e Econômica com foco em estratégia, ética e resultados sustentáveis.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#quem">Quem Somos</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#qualidade">Qualidade</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<section id="quem">
+  <h2>Quem Somos</h2>
+  <p>
+    A <strong>Máximus Júnior Consultoria Contábil e Econômica</strong> é uma empresa júnior vinculada à UFAM,
+    formada por estudantes de Ciências Contábeis e Ciências Econômicas, oferecendo soluções técnicas,
+    acessíveis e estratégicas para empresas e empreendedores.
+  </p>
+  <div style="margin-top:3rem;">
+    <img src="max.jpeg" alt="Equipe Máximus Júnior" style="width:100%;max-width:900px;border-radius:20px;box-shadow:0 0 40px rgba(247,147,30,0.35);border:3px solid #f7931e;" />
+    <p style="margin-top:1rem;color:#6b7280;font-size:0.95rem;">Equipe Máximus Júnior – UFAM</p>
+  </div>
+<section id="quem">
+  <h2>MISSÃO</h2>
+  <div class="info-grid">
+    <div class="info-box">
+      <i class="fas fa-chart-line"></i>
+      <h4>Estratégia</h4>
+      <p>Decisões orientadas por dados e análise econômica.</p>
+    </div>
+    <div class="info-box">
+      <i class="fas fa-shield-alt"></i>
+      <h4>Confiabilidade</h4>
+      <p>Atuação ética e supervisionada por professores.</p>
+    </div>
+    <div class="info-box">
+      <i class="fas fa-handshake"></i>
+      <h4>Parceria</h4>
+      <p>Relacionamento próximo e foco no cliente.</p>
+    </div>
+  </div>
+
+  
+</section>
+
+<section id="servicos">
+  <h2>VISÃO</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3><i class="fas fa-calculator"></i> Serviços Contábeis</h3>
+      <img src="serviço.jpeg" />
+      <ul>
+        <li><i class="fas fa-book"></i> Escrituração Contábil Digital</li>
+        <li><i class="fas fa-file-invoice"></i> Declaração de Imposto de Renda</li>
+        <li><i class="fas fa-scale-balanced"></i> Consultoria e Regularização Fiscal</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-chart-pie"></i> Serviços Econômicos</h3>
+      <img src="notas.jpg" />
+      <ul>
+        <li><i class="fas fa-briefcase"></i> Plano de Negócios</li>
+        <li><i class="fas fa-magnifying-glass-chart"></i> Pesquisa de Mercado</li>
+        <li><i class="fas fa-coins"></i> Fluxo de Caixa</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-award"></i> Selo EJ</h3>
+      <img src="selo.jpg" />
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Regularização Institucional</li>
+        <li><i class="fas fa-file-signature"></i> Estatuto, Atas e Livros</li>
+        <li><i class="fas fa-receipt"></i> Emissão de CNDs e NF</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="qualidade">
+  
+  <h2>VALORES</h2>
+  <p>
+    Atuamos com ética, sigilo, excelência técnica e atendimento humanizado,
+    promovendo impacto positivo, aprendizado contínuo e resultados concretos.
+  </p>
+  <div class="info-grid" style="margin-bottom:2rem;">
+    <div class="info-box"><i class="fas fa-user-shield"></i><h4>Ética</h4><p>Conduta responsável e transparente.</p></div>
+    <div class="info-box"><i class="fas fa-lock"></i><h4>Sigilo</h4><p>Proteção total das informações.</p></div>
+    <div class="info-box"><i class="fas fa-graduation-cap"></i><h4>Excelência</h4><p>Supervisão acadêmica qualificada.</p></div>
+  </div>
+</section>
+<div style="margin:4rem auto 2rem;display:flex;flex-direction:column;align-items:center;gap:2rem;">
+
+ <h2>Parceria</h2>
+<!-- Selo Alterdata -->
+<a href="https://alterdata.software/partner728x90" target="_blank" style="display:inline-block;padding:22px 28px;border-radius:22px;background:linear-gradient(160deg,#0f0f0f,#000);box-shadow:0 0 45px rgba(247,147,30,0.45);border:1px solid rgba(247,147,30,0.35);text-decoration:none;transition:transform .3s ease,box-shadow .3s ease;">
+<img src="https://www.alterdata.com.br/images/fixo/selos/728x90.webp" alt="Alterdata Partner" style="max-width:100%;border-radius:14px;display:block;" />
+<p style="margin-top:14px;color:#e6e8ec;font-size:.95rem;letter-spacing:.3px;text-align:center;">Parceiro tecnológico homologado</p>
+</a>
+
+
+<!-- Chamada para novos parceiros -->
+<div style="max-width:520px;text-align:center;">
+<h3 style="color:#f7931e;margin-bottom:.6rem;">Quer ser nosso parceiro?</h3>
+<p style="color:#151516;font-size:1rem;margin-bottom:1.2rem;">Empresas e instituições interessadas em parceria estratégica podem se candidatar entrando em contato conosco.</p>
+
+
+<a href="https://wa.me/5592985132017" target="_blank" style="display:inline-flex;align-items:center;gap:.6rem;padding:14px 34px;border-radius:30px;background:linear-gradient(135deg,#f7931e,#ffae42);color:#000;font-weight:700;text-decoration:none;box-shadow:0 0 30px rgba(247,147,30,.6);transition:transform .3s ease,box-shadow .3s ease;">
+<i class="fab fa-whatsapp"></i> Quero me candidatar
+</a>
+</div>
+</div>
+<!-- /Área de Parcerias -->
+<section id="contato">
+  <h2>Contato</h2>
+  <div class="contact">
+    <p><i class="fas fa-map-marker-alt"></i> UFAM – Faculdade de Estudos Sociais, Sala 60</p>
+    <p><i class="fas fa-envelope"></i> maximusjunior.ej@gmail.com</p>
+    <p><i class="fab fa-instagram"></i> @maximus.ej</p>
+    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5592985132017" target="_blank" style="color:#f7931e;font-weight:600;text-decoration:none;">(92) 98513-2017</a></p>
+    <p><i class="fas fa-clock"></i> Segunda a sexta, das 8h às 17h</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 <span>Máximus Júnior</span> – Consultoria Contábil e Econômica</p>
+</footer>
+
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5592985132017" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25D366, #1ebe57);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 0 25px rgba(37,211,102,0.6), 0 0 45px rgba(247,147,30,0.35);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 35px rgba(37,211,102,0.9), 0 0 60px rgba(247,147,30,0.6);
+}
+</style>
+<div style="margin:4rem auto 2rem;display:flex;flex-direction:column;align-items:center;gap:2rem;">
+
+
+</body>
+</html>
